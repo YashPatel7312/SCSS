@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.header {
+  background: #000;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 10px 20px;
+    li {
+      margin: 0 10px;
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+    .brand {
+      margin-right: auto;
+    }
+  }
+}
+
+.bg1 {
+  background: url("d1.jpg") no-repeat center center/cover;
+  text-align: center;
+  padding: 100px 20px;
+  .bg-tag {
+    color: white;
+    background-color: #1b1919;
+    padding: 4px 8px;
+  }
+  p {
+    font-size: 32px;
+    color: white;
+  }
+}
+
+.main-content {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+
+  .house {
+    flex: 1 1 calc(25% - 20px);
+    height: 200px;
+    background-color: #ddd;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 10px;
+    .f1 {
+      background-color: black;
+      color: white;
+      padding: 4px 6px;
+      font-size: 14px;
+    }
+  }
+}
+
+.about-text {
+  margin-bottom: 40px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  div {
+    flex: 1 1 calc(25% - 20px);
+    background: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    .card-img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .font1 {
+      font-weight: bold;
+      margin: 10px 0 5px;
+    }
+    .font2 {
+      color: gray;
+      margin-bottom: 10px;
+    }
+    .contact-btn {
+      padding: 8px 16px;
+      background: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        background: #444;
+      }
+    }
+  }
+}
+
+.footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+@media (max-width: 991px) {
+  .flex-container .house,
+  .card div {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .bg1 p {
+    font-size: 26px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .flex-container .house,
+  .card div {
+    flex: 1 1 100%;
+  }
+
+  .header ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bg1 p {
+    font-size: 20px;
+  }
+
+  .main-content {
+    padding: 20px 10px;
+  }
+}
